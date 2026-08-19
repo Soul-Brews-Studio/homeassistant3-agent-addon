@@ -1,0 +1,20 @@
+name: "Shell Agent"
+version: "0.1.0"
+slug: "shell_agent"
+description: "Persistent key-authenticated SSH shell with Node.js and build tools"
+url: "https://github.com/Soul-Brews-Studio/homeassistant3-agent-addon/tree/main/shell-agent"
+arch:
+  - amd64
+startup: services
+boot: auto
+init: false
+ports:
+  2222/tcp: 2222
+ports_description:
+  2222/tcp: "SSH shell"
+options:
+  ssh_authorized_key: null
+  ssh_port: 2222
+schema:
+  ssh_authorized_key: str
+  ssh_port: port
